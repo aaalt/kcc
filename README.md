@@ -912,7 +912,7 @@ An **adverb** is a **modifier** that takes some **verb** (which is a short way o
 A good example of how adverbs replace loops is `sum`. Say, we have an input `in:1 2 3 4 5`, and what we want is a sum of its elements. Thinking in implicit loops suggests something like:
 
 ```c
-int sum(int[]in){
+int sum(int in[]){
   int i=0,acc=0;
   for(;i<sizeof(in);++i)
     acc+=in[i];
@@ -1112,7 +1112,7 @@ $[c;t;f]            /a ctf cond, aka if-then-else aka ternary
 x                   /t:      do this if c is 1
 ,/f'x@&:'~:\x<*1?x  /f:      do that if c is 0
 
-2>#?x               /we don't how to read this, but it is clear that f[]
+2>#?x               /we don't know how to read this, but it is clear that f[]
                     /halts recursion when it evaluates to 1, returning x
                     /so lets find out what it means, going right to left
 
@@ -1139,7 +1139,7 @@ step:
 
 ,/f'x@&:'~:\x<*1?x   /this must be the recursion step, read right to left:
 
- x:4 0 1 2           /an tiny dataset to help us see what is going on here
+ x:4 0 1 2           /a tiny dataset to help us see what is going on here
 
  rnd:1?x             /x?y is 'find': picks x random elements from vector y
  rnd                 /list with one random item from x
@@ -1242,7 +1242,7 @@ And `qs` code brought a few more:
 * ctf cond `$[c;t;f]`
 * monadic `?x distinct`
 * monadic `#x count`
-* monadic `*x first
+* monadic `*x first`
 * monadic `~x not`
 * monadic `&x where`
 * monadic `,/x raze`
