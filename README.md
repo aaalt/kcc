@@ -912,10 +912,11 @@ An **adverb** is a **modifier** that takes some **verb** (which is a short way o
 A good example of how adverbs replace loops is `sum`. Say, we have an input `in:1 2 3 4 5`, and what we want is a sum of its elements. Thinking in implicit loops suggests something like:
 
 ```c
-int sum(int in[])
+int size=sizeof(in)/sizeof(in[0]);
+int sum(int in[], int size)
 {
   int i=0,acc=0;
-  for(; i<sizeof(in); ++i)
+  for(; i<size; ++i)
     acc+=in[i];
   return acc;
 }
